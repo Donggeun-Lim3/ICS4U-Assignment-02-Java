@@ -48,11 +48,11 @@ public final class StringBlowup {
                                                             strIndex++) {
             if (Character.isDigit(stringWithNumber.charAt(strIndex))) {
                 if (strIndex != stringWithNumber.length() - 1) {
-                    for (int charIndex = 0; charIndex
+                    for (int charIndex = 1; charIndex
                             < Character.getNumericValue(
                             stringWithNumber.charAt(strIndex)); charIndex++) {
                         convertedString += stringWithNumber.charAt(strIndex
-                                                                     + 1);
+                                                                   + 1);
                     }
                 }
             }
