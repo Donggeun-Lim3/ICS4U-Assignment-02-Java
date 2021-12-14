@@ -56,10 +56,11 @@ public final class StringBlowup {
                     }
                 }
             }
-            else if (strIndex == 0) { 
+            else if (strIndex == 0) {
                 convertedString += stringWithNumber.charAt(strIndex);
             }
-            else if (!Character.isDigit(stringWithNumber.charAt(strIndex - 1))) { 
+            else if (!Character.isDigit(stringWithNumber.charAt(
+                     strIndex - 1))) {
                 convertedString += stringWithNumber.charAt(strIndex);
             }
         }
