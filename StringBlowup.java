@@ -48,7 +48,7 @@ public final class StringBlowup {
                                                             strIndex++) {
             if (Character.isDigit(stringWithNumber.charAt(strIndex))) {
                 if (strIndex != stringWithNumber.length() - 1) {
-                    for (int charIndex = 1; charIndex
+                    for (int charIndex = 0; charIndex
                             < Character.getNumericValue(
                             stringWithNumber.charAt(strIndex)); charIndex++) {
                         convertedString += stringWithNumber.charAt(strIndex
@@ -56,7 +56,10 @@ public final class StringBlowup {
                     }
                 }
             }
-            else {
+            else if (strIndex == 0) { 
+                convertedString += stringWithNumber.charAt(strIndex);
+            }
+            else if (!Character.isDigit(stringWithNumber.charAt(strIndex - 1))) { 
                 convertedString += stringWithNumber.charAt(strIndex);
             }
         }
